@@ -16,8 +16,8 @@ import org.freedesktop.gstreamer.GStreamer;
 public class Tutorial3 extends Activity implements SurfaceHolder.Callback {
     private native void nativeInit();     // Initialize native code, build pipeline, etc
     private native void nativeFinalize(); // Destroy pipeline and shutdown native code
-    private native void nativePlay();     // Set pipeline to PLAYING
     private native void nativePause();    // Set pipeline to PAUSED
+    private native void nativePlay();     // Set pipeline to PLAYING
     private static native boolean nativeClassInit(); // Initialize native class: cache Method IDs for callbacks
     private native void nativeSurfaceInit(Object surface);
     private native void nativeSurfaceFinalize();

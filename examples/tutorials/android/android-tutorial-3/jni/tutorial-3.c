@@ -181,8 +181,8 @@ app_function (void *userdata)
   /* Build pipeline */
 //  data->pipeline = gst_parse_launch ("videotestsrc ! warptv ! videoconvert ! autovideosink", &error);
 //  data->pipeline= gst_parse_launch("udpsrc port=4000 caps=\"application/x-rtp, media=(string)video, clock-rate=(int)90000, encoding-name=(string)H264, sprop-parameter-sets=(string)\\\"Z0KAHukBQHpCAAAH0AAB1MAIAA\\\\=\\\\=\\\\,aM48gAA\\\\=\\\"\" ! rtph264depay ! decodebin2 ! autovideosink", &error);
-  data->pipeline = gst_parse_launch ("udpsrc port=5000 ! application/x-rtp, media=video, clock-rate=90000, encoding-name=H264, payload=96 ! rtph264depay ! h264parse ! avdec_h264 ! videoconvert ! autovideosink sync=false", &error);
-//  data->pipeline = gst_parse_launch ("udpsrc port=5000 ! application/x-rtp, media=video, clock-rate=90000, encoding-name=H264, payload=96! rtph264depay  ! h264parse ! avdec_h264 ! videoconvert ! autovideosink sync=false", &error);
+//  data->pipeline = gst_parse_launch ("udpsrc port=5000 ! application/x-rtp, media=video, clock-rate=90000, encoding-name=H264, payload=96 ! rtph264depay ! h264parse ! avdec_h264 ! videoconvert ! autovideosink", &error);
+  data->pipeline = gst_parse_launch ("udpsrc port=5000 ! application/x-rtp, media=video, clock-rate=90000, encoding-name=H264, payload=96 ! rtpjitterbuffer ! rtph264depay  ! h264parse ! avdec_h264 ! videoconvert ! autovideosink sync=false", &error);
 //    udp rtp videoparsersbad libav playback
   if (error) {
     gchar *message =
@@ -374,8 +374,7 @@ static JNINativeMethod native_methods[] = {
   {"nativeFinalize", "()V", (void *) gst_native_finalize},
   {"nativePlay", "()V", (void *) gst_native_play},
   {"nativePause", "()V", (void *) gst_native_pause},
-  {"nativeSurfaceInit", "(Ljava/lang/Object;)V",
-      (void *) gst_native_surface_init},
+  {"nativeSurfaceInit", "(Ljava/lang/Object;)V", (void *) gst_native_surface_init},
   {"nativeSurfaceFinalize", "()V", (void *) gst_native_surface_finalize},
   {"nativeClassInit", "()Z", (void *) gst_native_class_init}
 };
