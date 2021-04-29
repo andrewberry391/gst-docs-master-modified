@@ -2,7 +2,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white">
 
     <Button
         android:id="@+id/armButton"
@@ -12,7 +13,7 @@
         android:layout_marginTop="50dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="@dimen/button_spacing"
-        app:backgroundTint="@color/blue"
+        android:background="@color/blue"
         android:text="@string/arm"
         app:layout_constraintStart_toStartOf="@+id/ControlBar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,7 +28,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginTop="@dimen/button_spacing"
         android:layout_marginBottom="@dimen/button_spacing"
-        app:backgroundTint="@color/blue"
+        android:background="@color/blue"
         android:text="@string/disarm"
         app:layout_constraintStart_toStartOf="@+id/ControlBar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,7 +43,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginTop="@dimen/button_spacing"
         android:layout_marginBottom="@dimen/button_spacing"
-        app:backgroundTint="@color/blue"
+        android:background="@color/blue"
         android:text="@string/takeoff"
         app:layout_constraintStart_toStartOf="@+id/ControlBar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -57,7 +58,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginTop="@dimen/button_spacing"
         android:layout_marginBottom="@dimen/button_spacing"
-        app:backgroundTint="@color/blue"
+        android:background="@color/blue"
         android:text="@string/land"
         app:layout_constraintStart_toStartOf="@+id/ControlBar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,7 +73,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginTop="@dimen/button_spacing"
         android:layout_marginBottom="@dimen/button_spacing"
-        app:backgroundTint="@color/blue"
+        android:background="@color/blue"
         android:text="@string/hover"
         app:layout_constraintStart_toStartOf="@+id/ControlBar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -87,7 +88,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginTop="@dimen/button_spacing"
         android:layout_marginBottom="70dp"
-        app:backgroundTint="@color/blue"
+        android:background="@color/blue"
         android:text="@string/spray"
         app:layout_constraintStart_toStartOf="@+id/ControlBar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -98,10 +99,10 @@
         android:id="@+id/surface_video"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginStart="95dp"
+        android:layout_marginEnd="95dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="80dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/ControlBar"
         app:layout_constraintTop_toBottomOf="@+id/view"
@@ -112,51 +113,50 @@
         android:id="@+id/status"
         android:layout_width="341dp"
         android:layout_height="40dp"
-        android:layout_marginStart="16dp"
         android:layout_marginBottom="5dp"
-        android:gravity="center"
-        android:text="@string/current_status"
+        android:textColor="@color/black"
+        android:text="@string/flight_status"
         android:textSize="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="@id/button_play" />
 
     <TextView
         android:id="@+id/timeRunning"
         android:layout_width="0dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="124dp"
-        android:layout_marginBottom="16dp"
-        android:gravity="center"
+        android:layout_height="40dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/black"
         android:text="Time Running: XX:XX:XX"
-        android:textSize="32dp"
+        android:textSize="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/status" />
+        app:layout_constraintStart_toStartOf="@+id/button_stop" />
 
     <TextView
         android:id="@+id/textview_message"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginBottom="0dp"
-        android:textSize="2dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/button_play"
-        app:layout_constraintBottom_toTopOf="@id/status"
-        app:layout_constraintTop_toBottomOf="@id/surface_video" />
+        android:textSize="24dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/status"
+        app:layout_constraintStart_toEndOf="@id/status"
+        app:layout_constraintEnd_toEndOf="@id/status"
+        app:layout_constraintTop_toBottomOf="@id/button_play"
+        app:layout_constraintBottom_toTopOf="@id/status"/>
 
     <Button
         android:id="@+id/button_play"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginLeft="5dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="0dp"
         android:layout_marginRight="5dp"
-        android:layout_marginBottom="0dp"
         android:contentDescription="@string/button_play"
         android:src="@android:drawable/ic_media_play"
         android:text="@string/button_play"
+        android:background="@color/red"
         app:layout_constraintStart_toStartOf="@id/surface_video"
-        app:layout_constraintBottom_toTopOf="@id/status"
+        app:layout_constraintBottom_toTopOf="@id/textview_message"
         app:layout_constraintTop_toBottomOf="@id/surface_video"
         app:layout_constraintEnd_toStartOf="@id/button_stop" />
 
@@ -164,15 +164,16 @@
         android:id="@+id/button_stop"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="1dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="10dp"
         android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginBottom="0dp"
+        android:layout_marginRight="0dp"
         android:contentDescription="@string/button_stop"
         android:src="@android:drawable/ic_media_pause"
         android:text="@string/button_stop"
+        android:background="@color/red"
         app:layout_constraintEnd_toEndOf="@id/surface_video"
-        app:layout_constraintBottom_toTopOf="@id/status"
+        app:layout_constraintBottom_toTopOf="@id/textview_message"
         app:layout_constraintTop_toBottomOf="@id/surface_video"
         app:layout_constraintStart_toEndOf="@id/button_play" />
 
@@ -198,13 +199,14 @@
     <SeekBar
         android:id="@+id/PumpControlSlider"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginStart="100dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="24dp"
         android:clickable="false"
         android:progressTint="@color/red"
         android:thumbTint="@color/red"
+        app:layout_constraintTop_toBottomOf="@id/divider"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/ControlBar"
@@ -248,82 +250,13 @@
         android:id="@+id/divider"
         android:layout_width="0dp"
         android:layout_height="4dp"
+        android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:background="?android:attr/listDivider"
+        app:layout_constraintTop_toBottomOf="@id/sprayButton"
         app:layout_constraintBottom_toTopOf="@+id/PumpControlSlider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/ControlBar" />
 
 
 </android.support.constraint.ConstraintLayout>
-
-
-
-
-
-<!--<?xml version="1.0" encoding="utf-8"?>-->
-<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="match_parent"-->
-<!--    android:gravity="center_vertical"-->
-<!--    android:orientation="vertical" >-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/textview_message"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginBottom="16dip"-->
-<!--        android:gravity="center_horizontal" />-->
-
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginBottom="16dip"-->
-<!--        android:gravity="center_horizontal"-->
-<!--        android:orientation="horizontal" >-->
-
-<!--        <ImageButton-->
-<!--            android:id="@+id/button_play"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:contentDescription="@string/button_play"-->
-<!--            android:src="@android:drawable/ic_media_play"-->
-<!--            android:text="@string/button_play" />-->
-
-<!--        <ImageButton-->
-<!--            android:id="@+id/button_stop"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:contentDescription="@string/button_stop"-->
-<!--            android:src="@android:drawable/ic_media_pause"-->
-<!--            android:text="@string/button_stop" />-->
-<!--    </LinearLayout>-->
-
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:orientation="horizontal">-->
-<!--        <org.freedesktop.gstreamer.tutorials.tutorial_3.GStreamerSurfaceView-->
-<!--            android:id="@+id/surface_video"-->
-<!--            android:layout_width="320dip"-->
-<!--            android:layout_height="240dip"-->
-<!--            android:layout_marginBottom="16dip"-->
-<!--            android:layout_gravity="center_vertical|center_horizontal" />-->
-<!--    </LinearLayout>-->
-
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:layout_marginBottom="10dip"-->
-<!--        android:orientation="horizontal">-->
-<!--        <ImageButton-->
-<!--            android:id="@+id/temp"-->
-<!--            android:layout_width="20dip"-->
-<!--            android:layout_height="20dip"-->
-<!--            android:layout_marginBottom="10dip"-->
-<!--            android:contentDescription="@string/button_stop"-->
-<!--            android:src="@android:drawable/ic_media_pause"-->
-<!--            android:text="@string/button_stop" />-->
-<!--    </LinearLayout>-->
-
-<!--</LinearLayout>-->

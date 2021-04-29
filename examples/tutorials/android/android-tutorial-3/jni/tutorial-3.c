@@ -131,7 +131,7 @@ state_changed_cb (GstBus * bus, GstMessage * msg, CustomData * data)
   gst_message_parse_state_changed (msg, &old_state, &new_state, &pending_state);
   /* Only pay attention to messages coming from the pipeline, not its children */
   if (GST_MESSAGE_SRC (msg) == GST_OBJECT (data->pipeline)) {
-    gchar *message = g_strdup_printf ("State changed to %s",
+    gchar *message = g_strdup_printf ("Camera Status: %s",
         gst_element_state_get_name (new_state));
     set_ui_message (message, data);
     g_free (message);

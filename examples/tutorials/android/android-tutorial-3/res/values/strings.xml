@@ -17,5 +17,5 @@
     <string name="land">Land</string>
     <string name="hover">Hover</string>
     <string name="spray">Spray</string>
-    <string name="current_status">CURRENT STATUS:</string>
+    <string name="flight_status">Flight Status:</string>
 </resources>
