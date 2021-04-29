@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="ControlBar" type="id">ControlBar</item>
+    <item name="view" type="id">view</item>
+    <item name="disarmButton" type="id">disarmButton</item>
+    <item name="takeoffButton" type="id">takeoffButton</item>
+</resources>

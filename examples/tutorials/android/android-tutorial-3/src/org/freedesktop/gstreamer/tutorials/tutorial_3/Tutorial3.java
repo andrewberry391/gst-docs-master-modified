@@ -7,7 +7,7 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.ImageButton;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -42,7 +42,7 @@ public class Tutorial3 extends Activity implements SurfaceHolder.Callback {
 
         setContentView(R.layout.main);
 
-        ImageButton play = (ImageButton) this.findViewById(R.id.button_play);
+        Button play = (Button) this.findViewById(R.id.button_play);
         play.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 is_playing_desired = true;
@@ -50,7 +50,7 @@ public class Tutorial3 extends Activity implements SurfaceHolder.Callback {
             }
         });
 
-        ImageButton pause = (ImageButton) this.findViewById(R.id.button_stop);
+        Button pause = (Button) this.findViewById(R.id.button_stop);
         pause.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 is_playing_desired = false;

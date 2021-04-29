@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">GStreamer tutorial 3</string>
+    <string name="app_name_new">SeaShield</string>
     <string name="button_play">Play</string>
     <string name="button_stop">Stop</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Live</string>
+    <string name="title_notifications">Flights</string>
+    <string name="test_notification">Flights Fragment</string>
+    <string name="seashield_contol">SEASHIELD Contol</string>
+    <string name="seashield_logo">SEASHIELD_logo</string>
+    <string name="pump_control">Pump control</string>
+    <string name="disarm">Disarm</string>
+    <string name="arm">Arm</string>
+    <string name="takeoff">Takeoff</string>
+    <string name="land">Land</string>
+    <string name="hover">Hover</string>
+    <string name="spray">Spray</string>
+    <string name="current_status">CURRENT STATUS:</string>
 </resources>

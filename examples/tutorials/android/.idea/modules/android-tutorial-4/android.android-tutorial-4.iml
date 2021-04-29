@@ -34,10 +34,10 @@
     <content url="file://$MODULE_DIR$/../../../android-tutorial-4">
       <sourceFolder url="file://$MODULE_DIR$/../../../android-tutorial-4/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../../android-tutorial-4/res" type="java-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/../../../android-tutorial-4" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../../android-tutorial-4/build/generated/source/aidl/debug" isTestSource="false" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../../android-tutorial-4/build/generated/source/rs/debug" isTestSource="false" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../../android-tutorial-4/build/generated/res/rs/debug" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../android-tutorial-4" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/../../../android-tutorial-4/.cxx" />
       <excludeFolder url="file://$MODULE_DIR$/../../../android-tutorial-4/.externalNativeBuild" />
       <excludeFolder url="file://$MODULE_DIR$/../../../android-tutorial-4/.gradle" />
